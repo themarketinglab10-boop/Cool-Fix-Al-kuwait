@@ -63,6 +63,7 @@
         .hero h1 { font-size: 2.3rem; margin-bottom: 1rem; }
         .hero p { font-size: 1.1rem; max-width: 800px; margin: 0 auto; }
         .cta-btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; padding: 0.8rem 2rem; border-radius: 5px; font-weight: bold; font-size: 1.1rem; margin: 0.5rem; }
+        .phone-number { direction: ltr; unicode-bidi: isolate; display: inline-block; }
 
         /* Services */
         .services { max-width: 1200px; margin: 3rem auto; padding: 0 1rem; }
@@ -353,11 +354,11 @@
 
     <!-- Hero -->
     <section class="hero" id="home">
-        <h1 id="hero-title">فني صيانة أجهزة منزلية في أبو حليفة والكويت 24 ساعة</h1>
+        <h1 id="hero-title">فني صيانة أجهزة منزلية في الكويت 24 ساعة</h1>
         <p id="hero-desc">خدمات احترافية لصيانة وإصلاح أجهزة المنزل، تشمل المكيفات والثلاجات والفريزرات والغسالات الأوتوماتيك ومجففات الملابس، مع استجابة سريعة وأسعار تنافسية.</p>
         <div style="margin-top: 1.5rem;">
-            <a href="tel:+96555564125" class="cta-btn" id="btn-call">اتصال: 5556 4125</a>
-            <a href="https://wa.me/9655564125" class="cta-btn" style="background:#25D366;" id="btn-wa">تواصل واتساب</a>
+            <a href="tel:+96555564125" class="cta-btn" id="btn-call"><span id="btn-call-label">اتصال:</span> <span class="phone-number">5556 4125</span></a>
+            <a href="https://wa.me/96555564125" class="cta-btn" style="background:#25D366;" id="btn-wa">تواصل واتساب</a>
         </div>
     </section>
 
@@ -499,7 +500,7 @@
             <span class="floating-icon">☎</span>
             <span class="floating-label" id="floating-call-label">اتصال</span>
         </a>
-        <a href="https://wa.me/9655564125" target="_blank" rel="noopener" class="floating-btn floating-whatsapp" aria-label="WhatsApp CoolFix Kuwait">
+        <a href="https://wa.me/96555564125" target="_blank" rel="noopener" class="floating-btn floating-whatsapp" aria-label="WhatsApp CoolFix Kuwait">
             <span class="floating-icon">☘</span>
             <span class="floating-label" id="floating-wa-label">واتساب</span>
         </a>
@@ -567,9 +568,9 @@
             ar: {
                 logoText: "كول فيكس الكويت",
                 navHome: "الرئيسية", navServices: "خدماتنا", navUses: "الأجهزة", navAreas: "مناطق الخدمة", navBrands: "الماركات", navContact: "اتصل بنا", langToggle: "English",
-                heroTitle: "فني صيانة أجهزة منزلية في أبو حليفة والكويت 24 ساعة",
+                heroTitle: "فني صيانة أجهزة منزلية في الكويت 24 ساعة",
                 heroDesc: "خدمات احترافية لصيانة وإصلاح أجهزة المنزل، تشمل المكيفات والثلاجات والفريزرات والغسالات الأوتوماتيك ومجففات الملابس، مع استجابة سريعة وأسعار تنافسية.",
-                btnCall: "اتصال: 5556 4125", btnWa: "تواصل واتساب",
+                btnCall: "اتصال:", btnWa: "تواصل واتساب",
                 servicesTitle: "خدماتنا المتخصصة",
                 s1Title: "فني تكييف مركزي وصيانة شاملة", 
                 s1Desc: "خدمة متكاملة تحت إشراف فني تكييف مركزي متخصص لفحص وصيانة وحدات التكييف المركزي للمنازل والشركات. تشمل صيانة الدكت، فحص الوحدات الخارجية والداخلية، معالجة مشاكل التبريد الضعيف، واستبدال القطع التالفة بقطع غيار أصلية لضمان أفضل أداء للتكييف.",
@@ -600,7 +601,7 @@
                 navHome: "Home", navServices: "Services", navUses: "Appliances", navAreas: "Service Areas", navBrands: "Brands", navContact: "Contact", langToggle: "عربي",
                 heroTitle: "Home Appliance Repair & Maintenance in Abu Halifa | 24/7 Service",
                 heroDesc: "Professional home appliance repair and maintenance for AC units, refrigerators, freezers, automatic washing machines, and washing dryers, with fast response and competitive prices.",
-                btnCall: "Call: 5556 4125", btnWa: "WhatsApp Us",
+                btnCall: "Call:", btnWa: "WhatsApp Us",
                 servicesTitle: "Our Specialized Services",
                 s1Title: "Central AC Technician & Maintenance", 
                 s1Desc: "Comprehensive inspection and repair under expert central AC technicians for residential & commercial properties. Fix ductwork, inspect internal/external units, fix low cooling, and replace parts with genuine spares.",
@@ -674,7 +675,7 @@
             
             document.getElementById('hero-title').innerText = t.heroTitle;
             document.getElementById('hero-desc').innerText = t.heroDesc;
-            document.getElementById('btn-call').innerText = t.btnCall;
+            document.getElementById('btn-call-label').innerText = t.btnCall;
             document.getElementById('btn-wa').innerText = t.btnWa;
             
             document.getElementById('services-title').innerText = t.servicesTitle;
