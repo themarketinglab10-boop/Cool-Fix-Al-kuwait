@@ -289,6 +289,35 @@
         .contact { background: #fff; max-width: 1200px; margin: 3rem auto; padding: 2.5rem 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
         .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; text-align: center; }
 
+        /* About Us Section */
+        .about-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, #eef6ff 100%);
+            border: 1px solid #e1eaf4;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .about-heading { text-align: center; color: var(--primary); margin-bottom: 2rem; }
+        .about-heading h2 { font-size: 2rem; margin-bottom: .65rem; }
+        .about-heading p { color: #5f6b76; max-width: 760px; margin: auto; }
+        .about-content { display: grid; grid-template-columns: 1.15fr .85fr; gap: 2rem; align-items: stretch; }
+        .about-copy { color: #404b55; font-size: 1rem; line-height: 1.9; }
+        .about-copy p + p { margin-top: 1rem; }
+        .about-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+        .about-point { background: #fff; border: 1px solid #dce7f2; border-radius: 6px; padding: 1.1rem; text-align: center; }
+        .about-point strong { display: block; color: var(--primary); margin-bottom: .35rem; }
+        .about-point span { color: #596570; font-size: .9rem; }
+        .about-promise { background: var(--primary); color: #fff; border-radius: 8px; padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+        .about-promise h3 { font-size: 1.45rem; margin-bottom: .8rem; }
+        .about-promise p { line-height: 1.8; }
+        @media (max-width: 760px) {
+            .about-section { padding: 2.2rem 1rem; }
+            .about-content { grid-template-columns: 1fr; }
+            .about-points { grid-template-columns: 1fr; }
+        }
+
         /* Vertical Floating Contact Buttons */
         .floating-contact {
             position: fixed;
@@ -359,6 +388,7 @@
                 <li><a href="#uses" id="nav-uses">الأجهزة</a></li>
                 <li><a href="#areas" id="nav-areas">مناطق الخدمة</a></li>
                 <li><a href="#brands" id="nav-brands">الماركات</a></li>
+                <li><a href="#about" id="nav-about">من نحن</a></li>
                 <li><a href="#contact" id="nav-contact">اتصل بنا</a></li>
                 <li><button class="lang-btn" onclick="toggleLanguage()" id="lang-toggle">English</button></li>
             </ul>
@@ -488,6 +518,29 @@
         </div>
     </section>
 
+    <!-- About Us Section -->
+    <section class="about-section" id="about">
+        <div class="about-heading">
+            <h2 id="about-title">من نحن</h2>
+            <p id="about-subtitle">خدمة صيانة موثوقة للأجهزة المنزلية في الكويت</p>
+        </div>
+        <div class="about-content">
+            <div class="about-copy">
+                <p id="about-paragraph-one">كول فيكس الكويت مركز متخصص في صيانة وإصلاح الأجهزة المنزلية، ونخدم العائلات والشركات في أبو حليفة والمناطق المجاورة. نساعدك في الحفاظ على أداء أجهزة التكييف والثلاجات والفريزرات والغسالات ومجففات الملابس بكفاءة وأمان.</p>
+                <p id="about-paragraph-two">نعتمد على فنيين ذوي خبرة في تشخيص الأعطال بدقة، ونسعى لتقديم خدمة واضحة واحترافية من أول اتصال حتى اكتمال الإصلاح. نوضح المشكلة والحل قبل بدء العمل، ونستخدم قطع غيار مناسبة لضمان نتيجة تدوم.</p>
+                <div class="about-points">
+                    <div class="about-point"><strong id="about-point-one-title">استجابة سريعة</strong><span id="about-point-one-text">ننسق موعد الخدمة بأسرع وقت ممكن.</span></div>
+                    <div class="about-point"><strong id="about-point-two-title">فنيون متخصصون</strong><span id="about-point-two-text">خبرة عملية في مختلف الأجهزة والماركات.</span></div>
+                    <div class="about-point"><strong id="about-point-three-title">خدمة واضحة</strong><span id="about-point-three-text">تشخيص وتكلفة مفهومة قبل الإصلاح.</span></div>
+                </div>
+            </div>
+            <div class="about-promise">
+                <h3 id="about-promise-title">وعدنا لك</h3>
+                <p id="about-promise-text">أن تحصل على صيانة أمينة، تواصل محترم، وحل عملي يساعد جهازك على العمل بكفاءة من جديد.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Details -->
     <section class="contact" id="contact">
         <h2 style="text-align: center; color: var(--primary); margin-bottom: 1.5rem;" id="contact-title">تواصل معنا الآن</h2>
@@ -537,6 +590,7 @@
                     <li><a href="#services" id="f-link-serv">خدماتنا</a></li>
                     <li><a href="#areas" id="f-link-areas">مناطق الخدمة</a></li>
                     <li><a href="#brands" id="f-link-brands">الماركات</a></li>
+                    <li><a href="#about" id="f-link-about">من نحن</a></li>
                     <li><a href="#contact" id="f-link-cont">اتصل بنا</a></li>
                 </ul>
             </div>
@@ -584,7 +638,7 @@
         const translations = {
             ar: {
                 logoText: "كول فيكس الكويت",
-                navHome: "الرئيسية", navServices: "خدماتنا", navUses: "الأجهزة", navAreas: "مناطق الخدمة", navBrands: "الماركات", navContact: "اتصل بنا", langToggle: "English",
+                navHome: "الرئيسية", navServices: "خدماتنا", navUses: "الأجهزة", navAreas: "مناطق الخدمة", navBrands: "الماركات", navAbout: "من نحن", navContact: "اتصل بنا", langToggle: "English",
                 heroTitle: "فني صيانة أجهزة منزلية في الكويت 24 ساعة",
                 heroDesc: "خدمات احترافية لصيانة وإصلاح أجهزة المنزل، تشمل المكيفات والثلاجات والفريزرات والغسالات الأوتوماتيك ومجففات الملابس، مع استجابة سريعة وأسعار تنافسية.",
                 btnCall: "اتصال:", btnWa: "تواصل واتساب",
@@ -613,11 +667,18 @@
                 phoneLabel: "الهاتف / واتساب:",
                 fAboutTitle: "كول فيكس الكويت", fAboutDesc: "مركزك الموثوق يوفر لك فني تكييف، فني غسالات، وفني تكييف مركزي متمرس لصيانة الأجهزة في أبو حليفة والمناطق المجاورة بأعلى جودة وأسرع استجابة.",
                 fLinksTitle: "روابط سريعة", fLinkHome: "الرئيسية", fLinkServ: "خدماتنا", fLinkAreas: "مناطق الخدمة", fLinkBrands: "الماركات", fLinkCont: "اتصل بنا",
-                fContactTitle: "تفاصيل الاتصال"
+                fLinkAbout: "من نحن", fContactTitle: "تفاصيل الاتصال",
+                aboutTitle: "من نحن", aboutSubtitle: "خدمة صيانة موثوقة للأجهزة المنزلية في الكويت",
+                aboutParagraphOne: "كول فيكس الكويت مركز متخصص في صيانة وإصلاح الأجهزة المنزلية، ونخدم العائلات والشركات في أبو حليفة والمناطق المجاورة. نساعدك في الحفاظ على أداء أجهزة التكييف والثلاجات والفريزرات والغسالات ومجففات الملابس بكفاءة وأمان.",
+                aboutParagraphTwo: "نعتمد على فنيين ذوي خبرة في تشخيص الأعطال بدقة، ونسعى لتقديم خدمة واضحة واحترافية من أول اتصال حتى اكتمال الإصلاح. نوضح المشكلة والحل قبل بدء العمل، ونستخدم قطع غيار مناسبة لضمان نتيجة تدوم.",
+                aboutPointOneTitle: "استجابة سريعة", aboutPointOneText: "ننسق موعد الخدمة بأسرع وقت ممكن.",
+                aboutPointTwoTitle: "فنيون متخصصون", aboutPointTwoText: "خبرة عملية في مختلف الأجهزة والماركات.",
+                aboutPointThreeTitle: "خدمة واضحة", aboutPointThreeText: "تشخيص وتكلفة مفهومة قبل الإصلاح.",
+                aboutPromiseTitle: "وعدنا لك", aboutPromiseText: "أن تحصل على صيانة أمينة، تواصل محترم، وحل عملي يساعد جهازك على العمل بكفاءة من جديد."
             },
             en: {
                 logoText: "CoolFix Kuwait",
-                navHome: "Home", navServices: "Services", navUses: "Appliances", navAreas: "Service Areas", navBrands: "Brands", navContact: "Contact", langToggle: "عربي",
+                navHome: "Home", navServices: "Services", navUses: "Appliances", navAreas: "Service Areas", navBrands: "Brands", navAbout: "About Us", navContact: "Contact", langToggle: "عربي",
                 heroTitle: "Home Appliance Repair & Maintenance in Abu Halifa | 24/7 Service",
                 heroDesc: "Professional home appliance repair and maintenance for AC units, refrigerators, freezers, automatic washing machines, and washing dryers, with fast response and competitive prices.",
                 btnCall: "Call:", btnWa: "WhatsApp Us",
@@ -646,7 +707,14 @@
                 phoneLabel: "Phone / WhatsApp:",
                 fAboutTitle: "CoolFix Kuwait", fAboutDesc: "Your trusted center providing expert AC technicians, washing machine repairmen, and central AC specialists in Abu Halifa and nearby areas.",
                 fLinksTitle: "Quick Links", fLinkHome: "Home", fLinkServ: "Services", fLinkAreas: "Service Areas", fLinkBrands: "Brands", fLinkCont: "Contact",
-                fContactTitle: "Contact Details"
+                fLinkAbout: "About Us", fContactTitle: "Contact Details",
+                aboutTitle: "About Us", aboutSubtitle: "Reliable home appliance repair service in Kuwait",
+                aboutParagraphOne: "CoolFix Kuwait is a specialized home appliance repair and maintenance center serving families and businesses in Abu Halifa and nearby areas. We help keep air conditioners, refrigerators, freezers, washing machines, and clothes dryers working safely and efficiently.",
+                aboutParagraphTwo: "Our experienced technicians diagnose faults carefully and provide clear, professional service from the first call through completion. We explain the problem and solution before starting work and use suitable spare parts for dependable results.",
+                aboutPointOneTitle: "Fast Response", aboutPointOneText: "We arrange your service appointment as quickly as possible.",
+                aboutPointTwoTitle: "Skilled Technicians", aboutPointTwoText: "Practical experience across appliances and leading brands.",
+                aboutPointThreeTitle: "Clear Service", aboutPointThreeText: "Straightforward diagnosis and pricing before repair.",
+                aboutPromiseTitle: "Our Promise", aboutPromiseText: "Honest maintenance, respectful communication, and a practical solution to get your appliance working efficiently again."
             }
         };
 
@@ -689,8 +757,10 @@
             document.getElementById('logo-text').innerText = 'CoolFix Kuwait';
             document.getElementById('nav-home').innerText = t.navHome;
             document.getElementById('nav-services').innerText = t.navServices;
+            document.getElementById('nav-uses').innerText = t.navUses;
             document.getElementById('nav-areas').innerText = t.navAreas;
             document.getElementById('nav-brands').innerText = t.navBrands;
+            document.getElementById('nav-about').innerText = t.navAbout;
             document.getElementById('nav-contact').innerText = t.navContact;
             document.getElementById('lang-toggle').innerText = t.langToggle;
             
@@ -712,6 +782,19 @@
             
             document.getElementById('brands-title').innerHTML = t.brandsTitle;
             document.getElementById('brands-subtitle').innerText = t.brandsSubtitle;
+
+            document.getElementById('about-title').innerText = t.aboutTitle;
+            document.getElementById('about-subtitle').innerText = t.aboutSubtitle;
+            document.getElementById('about-paragraph-one').innerText = t.aboutParagraphOne;
+            document.getElementById('about-paragraph-two').innerText = t.aboutParagraphTwo;
+            document.getElementById('about-point-one-title').innerText = t.aboutPointOneTitle;
+            document.getElementById('about-point-one-text').innerText = t.aboutPointOneText;
+            document.getElementById('about-point-two-title').innerText = t.aboutPointTwoTitle;
+            document.getElementById('about-point-two-text').innerText = t.aboutPointTwoText;
+            document.getElementById('about-point-three-title').innerText = t.aboutPointThreeTitle;
+            document.getElementById('about-point-three-text').innerText = t.aboutPointThreeText;
+            document.getElementById('about-promise-title').innerText = t.aboutPromiseTitle;
+            document.getElementById('about-promise-text').innerText = t.aboutPromiseText;
 
             document.getElementById('use-central-ac').innerText = t.useCentralAc;
             document.getElementById('use-split-ac').innerText = t.useSplitAc;
@@ -739,6 +822,7 @@
             document.getElementById('f-link-serv').innerText = t.fLinkServ;
             document.getElementById('f-link-areas').innerText = t.fLinkAreas;
             document.getElementById('f-link-brands').innerText = t.fLinkBrands;
+            document.getElementById('f-link-about').innerText = t.fLinkAbout;
             document.getElementById('f-link-cont').innerText = t.fLinkCont;
             document.getElementById('f-contact-title').innerText = t.fContactTitle;
 
